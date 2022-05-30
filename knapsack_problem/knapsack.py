@@ -1,6 +1,5 @@
 import time
 import numpy as np
-from multiprocessing import process
 
 with open('data/plecak.txt', 'r') as data:
     max_capacity, n = [int(v) for v in data.readline().split(' ')]
@@ -16,16 +15,6 @@ current_vector = max_vector
 for current_vector in range(max_vector, 0, -1):
     combined_weight = 0
     combined_value = 0
-
-    # str_vec = bin(current_vector)[2:]
-
-    # if len(str_vec) < len(values):
-    #     str_vec = ('0' * (len(values) - len(str_vec))) + str_vec
-    # filter_vector = np.array([int(x) for x in str_vec])
-    #
-    # # print(filter_vector)
-    # combined_value = np.sum(values * filter_vector)
-    # combined_weight = np.sum(weights * filter_vector)
 
     for index, (value, weight) in enumerate(zip(values, weights)):
         if ((current_vector >> index) & 1) == 1:

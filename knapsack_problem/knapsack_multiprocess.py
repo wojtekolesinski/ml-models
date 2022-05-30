@@ -53,3 +53,6 @@ if __name__ == '__main__':
     print(f'elapsed time: {time.time() - start:.3}s')
     vector, value, weight = sorted(return_dict.values(), key=lambda x: x[1], reverse=True)[0]
     print(f'best vector: {bin(vector)[2:]} -> value: {value}, weight: {weight}')
+
+    # best vector: 1001000111000011100000110 -> value: 112, weight: 49
+    # best vector: 1001000111000011100000110 -> value: 112, weight: 49
